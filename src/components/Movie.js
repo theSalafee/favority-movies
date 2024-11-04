@@ -1,4 +1,3 @@
-// src/components/Movie.js
 import React from 'react';
 
 function Movie({ title, year, isFavorite, toggleFavorite }) {
