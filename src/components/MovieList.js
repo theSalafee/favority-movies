@@ -1,4 +1,5 @@
 import Movie from './Movie';
+import './MovieList.scss';
 
 function MovieList({ movies, toggleFavorite }) {
   return (

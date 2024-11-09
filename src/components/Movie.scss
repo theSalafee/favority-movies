@@ -1,0 +1,32 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.movie {
+  display: flex;
+  flex-direction: column;
+  background-color: $light-bg-color;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  padding: 15px;
+  width: 200px;
+  margin: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  @include box-shadow;
+
+  &:hover {
+    box-shadow: 0px 8px 16px $highlight-color;
+    transform: scale(1.05);
+  }
+
+  .movie-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: $text-color;
+  }
+
+  a {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+}

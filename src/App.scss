@@ -1,0 +1,9 @@
+@import './styles/variables';
+@import './styles/mixins';
+@import './styles/globals';
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  padding-bottom: 80px; // Ensure footer is visible
+}

@@ -1,3 +1,5 @@
+import './HomePage.scss'
+
 function HomePage() {
     return (
       <div>

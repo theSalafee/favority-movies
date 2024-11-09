@@ -1,0 +1,19 @@
+@import '../styles/variables';
+
+header {
+  background-color: $header-bg-color;
+  padding: 20px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  nav a {
+    color: white;
+    margin: 0 10px;
+    font-weight: bold;
+  }
+}

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import './Movie.scss';
 
 function Movie({ movie, toggleFavorite }) {
   const { id, title, year, isFavorite } = movie;

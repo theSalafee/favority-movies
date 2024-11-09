@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import moviesData from '../data/moviesData';
+import './MovieDetailPage.scss';
 
 function MovieDetailPage() {
   const { id } = useParams();

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import moviesData from '../data/moviesData';
 import MovieList from '../components/MovieList';
+import './MoviesDirectoryPage.scss';
 
 function MoviesDirectoryPage() {
   const [movies, setMovies] = useState(moviesData);

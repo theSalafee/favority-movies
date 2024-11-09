@@ -1,0 +1,18 @@
+@mixin button-styles($bg-color, $hover-color) {
+    background-color: $bg-color;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+  
+  @mixin box-shadow {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
