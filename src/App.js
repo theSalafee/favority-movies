@@ -1,15 +1,24 @@
-import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import MovieList from './components/MovieList';
 import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
+import MoviesDirectoryPage from './pages/MoviesDirectoryPage';
+import MovieDetailPage from './pages/MovieDetailPage';
 import './App.css';
+
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <MovieList />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/movies" element={<MoviesDirectoryPage />} />
+          <Route path="/movies/:id" element={<MovieDetailPage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

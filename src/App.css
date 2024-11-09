@@ -3,6 +3,9 @@
   text-align: center;
   font-family: "Roboto", sans-serif;
   color: #333;
+  background-color: #f5f5f5; /* Light background for contrast */
+  min-height: 100vh;
+  padding-bottom: 80px; /* Ensure footer is visible */
 }
 
 /* Header Styling */
@@ -13,6 +16,30 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Home Page Styling */
+.home-page {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Movie List Container Styling */
@@ -20,6 +47,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 20px;
   padding-bottom: 100px; /* Space for footer */
 }
 
@@ -28,19 +56,20 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
   margin: 10px;
   padding: 15px;
   width: 200px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  height: 100%; /* Ensure uniform card height */
+  height: 100%;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .movie:hover {
   box-shadow: 0px 8px 16px rgba(6, 9, 179, 0.276);
-  transform: scale(1.02);
-  transition: all 0.9s;
+  transform: scale(1.05);
 }
 
 /* Movie Title Styling */
@@ -48,6 +77,7 @@ header {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 8px;
+  color: #333;
 }
 
 /* Button Styling */
@@ -66,6 +96,18 @@ header {
   background-color: #0056b3;
 }
 
+/* Link Button Styling for Details */
+.movie a {
+  margin-top: 10px;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.movie a:hover {
+  text-decoration: underline;
+}
+
 /* Footer Styling */
 footer {
   padding: 20px;
@@ -74,78 +116,72 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
+  text-align: center;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Fonts */
-.roboto-thin {
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-style: normal;
+/* Toggle Favorites Button */
+.toggle-favorites {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.roboto-light {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-style: normal;
+.toggle-favorites:hover {
+  background-color: #218838;
 }
 
-.roboto-regular {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+/* Movie Details Page Styling */
+.movie-detail-page {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin: 40px auto;
+  max-width: 600px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.roboto-medium {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-style: normal;
+.movie-detail-page h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-.roboto-bold {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+.movie-detail-page p {
+  font-size: 16px;
+  line-height: 1.6;
 }
 
-.roboto-black {
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  font-style: normal;
+/* Back Button Styling */
+.back-button {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #dc3545;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.roboto-thin-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-style: italic;
+.back-button:hover {
+  background-color: #c82333;
 }
 
-.roboto-light-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .movie-list {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.roboto-regular-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: italic;
+  .movie {
+    width: 80%;
+  }
 }
-
-.roboto-medium-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.roboto-bold-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.roboto-black-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  font-style: italic;
-}
-
