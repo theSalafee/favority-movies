@@ -1,8 +1,8 @@
-@import '../styles/variables';
-@import '../styles/mixins';
+@use '../styles/variables';
+@use '../styles/mixins';
 
 footer {
-  @include box-shadow;
+  @include mixins.box-shadow;
   padding: 20px;
   background-color: #f1f1f1;
   position: fixed;

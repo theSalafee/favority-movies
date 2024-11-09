@@ -1,7 +1,7 @@
-@import '../styles/variables';
+@use '../styles/variables';
 
 header {
-  background-color: $header-bg-color;
+  background-color: variables.$header-bg-color;
   padding: 20px;
   color: white;
   position: sticky;

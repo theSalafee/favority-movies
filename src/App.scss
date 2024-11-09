@@ -1,6 +1,6 @@
-@import './styles/variables';
-@import './styles/mixins';
-@import './styles/globals';
+@use 'styles/variables';
+@use 'styles/mixins';
+@use 'styles/globals';
 
 .App {
   text-align: center;

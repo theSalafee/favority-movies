@@ -1,12 +1,12 @@
-@import '../styles/variables';
-@import '../styles/mixins';
+@use '../styles/variables';
+@use '../styles/mixins';
 
 .home-page {
     padding: 20px;
-    background-color: $light-bg-color;
+    background-color: variables.$light-bg-color;
     border-radius: 8px;
     margin: 20px auto;
     max-width: 800px;
-    @include box-shadow;
+    @include mixins.box-shadow;
   }
   
