@@ -9,4 +9,12 @@
     max-width: 800px;
     @include mixins.box-shadow;
   }
+
+  .responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; // Center the image
+    border-radius: 8px; // Optional: add rounded corners if desired
+  }
   
